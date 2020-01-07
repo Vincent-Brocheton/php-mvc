@@ -1,0 +1,19 @@
+{
+    "name": "dwwm/table",
+    "description": "Des outils pour les classes de primaire",
+    "type": "project",
+    "require": {
+        "twbs/bootstrap": "^4.3",
+        "components/jquery": "^3.3"
+    },
+    "license": "GPL 3.0",
+    "authors": [
+        {
+            "name": "David RIEHL",
+            "email": "david.riehl@ac-lille.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Valarep\\": "./" }
+    }
+}
