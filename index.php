@@ -27,6 +27,11 @@ switch($page)
         //Routage vers le controller
         PostController::ListAction();
         break;
+    case 'post-insert':
+        //routage vers le controller
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        PostController::PostAction($title, $content);
     default:
         //todo: ERREUR 404
         break;
