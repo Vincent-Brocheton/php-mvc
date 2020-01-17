@@ -10,6 +10,7 @@ $router = new Router();
 $router->addRoute(new Route("/", "PostController"));
 $router->addRoute(new Route("/posts", "PostController"));
 $router->addRoute(new Route("/post/{*}", "PostController"));
+$router->addRoute(new Route("/comment/{*}", "CommentController"));
 
 $route = $router->findRoute();
 

@@ -17,7 +17,7 @@ class CommentDao
         $sth->execute();
         $sth->setFetchMode(
             PDO::FETCH_CLASS, //On veut des objets
-            "Valarep\\objects\\comments" // La classe Post complétement qualifiée
+            "Valarep\\objects\\Comment" // La classe Post complétement qualifiée
         );
         $items = $sth->fetchAll();
         Dao::close();

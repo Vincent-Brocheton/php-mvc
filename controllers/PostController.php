@@ -45,12 +45,15 @@ class PostController
 
     public static function InsertAction()
     {
-        $title ;
-        $content ;
+        $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
+        $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_STRING) ;
 
         // Route : /post/insert
         Post::insert($title, $content);
 
-        header("location: .");
+        //Récupération de la racine de l'URL
+        $router = new Router();
+        $path = $router->getBasePath();
+        header("location: {$path}/");
     }
 }
