@@ -24,7 +24,7 @@ class CommentDao
         return $items;
     }
 
-    public static function insert($title, $content)
+    public static function insert($content, $id_post)
     {
         $dbh = Dao::open(); //DataBase Handler (PDO)
         $query = "INSERT INTO `comment`

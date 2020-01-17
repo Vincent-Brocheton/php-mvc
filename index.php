@@ -32,6 +32,13 @@ switch($page)
         $title = $_POST['title'];
         $content = $_POST['content'];
         PostController::PostAction($title, $content);
+        case 'comment-insert':
+            // routage vers CommentController
+            $id_post = $_GET['id_post'];
+            $content = $_POST['content'];
+    
+            CommentController::InsertAction($content, $id_post);
+            break;
     default:
         //todo: ERREUR 404
         break;
