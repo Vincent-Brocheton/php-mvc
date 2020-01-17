@@ -1,7 +1,7 @@
-<div class=" container" style="border: 2px solid black">
-<form method="post" action="?page=post-insert">
+<form method="post" action="?page=comment-insert&id_post=<?= $post->$id ?>">
     Texte : <br>
-    <textarea class="form-control" name="content" rows="3" cols="100" placeholder="Saisir un texte."></textarea><br>
-    <input class="button" type="submit" value="Comment">
+    <textarea class="form-control" name="content" rows="3" cols="100" placeholder="Saisir un texte." required></textarea><br>
+    <div class="form-group row d-flex justify-content-end">
+    <input class="btn btn-outline-secondary" type="submit" name="btnCommentIt" value="Comment">
+    </div>
 </form>
-</div>
