@@ -1,6 +1,6 @@
 
 <div class=" container" style="border: 2px solid black">
-<form method="post" action="?page=post-insert">
+<form method="post" action="<?= $path; ?>/post/insert">
     Titre : <br>
     <input type="text" name="title" placeholder="Saisir un titre."><br>
     Texte : <br>

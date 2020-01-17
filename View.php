@@ -18,6 +18,10 @@ class View
 
     public static function display()
     {
+        //Récupération de la racine de l'URL
+        $router = new Router();
+        $path = $router->getBasePath();
+
         // boucle de création de variables
         foreach (self::$variables as $name => $value)
         {
